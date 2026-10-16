@@ -13,10 +13,10 @@ importers:
         version: 5.0.35(react@18.3.1)
       '@coinbase/coinbase-sdk':
         specifier: ^0.4.0
-        version: 0.4.0
+        version: 0.4.0(debug@4.3.7(supports-color@5.5.0))
       axios:
         specifier: ^1.6.5
-        version: 1.7.7
+        version: 1.7.7(debug@4.3.7(supports-color@5.5.0))
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -25,13 +25,13 @@ importers:
         version: 16.4.5
       express:
         specifier: ^4.18.2
-        version: 4.19.2
+        version: 4.19.2(supports-color@5.5.0)
       jsonwebtoken:
         specifier: ^9.0.2
         version: 9.0.2
       mongoose:
         specifier: ^8.6.1
-        version: 8.6.1
+        version: 8.6.1(supports-color@5.5.0)
       svix:
         specifier: ^1.32.0
         version: 1.32.0
@@ -264,8 +264,8 @@ packages:
     resolution: {integrity: sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
+  brace-expansion@1.1.21:
+    resolution: {integrity: sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1075,12 +1075,12 @@ snapshots:
     dependencies:
       csstype: 3.1.1
 
-  '@coinbase/coinbase-sdk@0.4.0':
+  '@coinbase/coinbase-sdk@0.4.0(debug@4.3.7(supports-color@5.5.0))':
     dependencies:
       '@scure/bip32': 1.5.0
-      axios: 1.7.7
-      axios-mock-adapter: 1.22.0(axios@1.7.7)
-      axios-retry: 4.5.0(axios@1.7.7)
+      axios: 1.7.7(debug@4.3.7(supports-color@5.5.0))
+      axios-mock-adapter: 1.22.0(axios@1.7.7(debug@4.3.7(supports-color@5.5.0)))
+      axios-retry: 4.5.0(axios@1.7.7(debug@4.3.7(supports-color@5.5.0)))
       bip32: 4.0.0
       bip39: 3.1.0
       decimal.js: 10.4.3
@@ -1226,20 +1226,20 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios-mock-adapter@1.22.0(axios@1.7.7):
+  axios-mock-adapter@1.22.0(axios@1.7.7(debug@4.3.7(supports-color@5.5.0))):
     dependencies:
-      axios: 1.7.7
+      axios: 1.7.7(debug@4.3.7(supports-color@5.5.0))
       fast-deep-equal: 3.1.3
       is-buffer: 2.0.5
 
-  axios-retry@4.5.0(axios@1.7.7):
+  axios-retry@4.5.0(axios@1.7.7(debug@4.3.7(supports-color@5.5.0))):
     dependencies:
-      axios: 1.7.7
+      axios: 1.7.7(debug@4.3.7(supports-color@5.5.0))
       is-retry-allowed: 2.2.0
 
-  axios@1.7.7:
+  axios@1.7.7(debug@4.3.7(supports-color@5.5.0)):
     dependencies:
-      follow-redirects: 1.15.9
+      follow-redirects: 1.15.9(debug@4.3.7(supports-color@5.5.0))
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -1270,11 +1270,11 @@ snapshots:
 
   bn.js@4.12.0: {}
 
-  body-parser@1.20.2:
+  body-parser@1.20.2(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -1287,7 +1287,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  brace-expansion@1.1.11:
+  brace-expansion@1.1.21:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
@@ -1381,9 +1381,11 @@ snapshots:
 
   csstype@3.1.1: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.3.7(supports-color@5.5.0):
     dependencies:
@@ -1457,21 +1459,21 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  express@4.19.2:
+  express@4.19.2(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.2
+      body-parser: 1.20.2(supports-color@5.5.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.6.0
       cookie-signature: 1.0.6
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 1.0.2
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.2.0
+      finalhandler: 1.2.0(supports-color@5.5.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.1
@@ -1483,8 +1485,8 @@ snapshots:
       qs: 6.11.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.18.0
-      serve-static: 1.15.0
+      send: 0.18.0(supports-color@5.5.0)
+      serve-static: 1.15.0(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -1501,9 +1503,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.2.0:
+  finalhandler@1.2.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       encodeurl: 1.0.2
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -1513,7 +1515,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  follow-redirects@1.15.9: {}
+  follow-redirects@1.15.9(debug@4.3.7(supports-color@5.5.0)):
+    optionalDependencies:
+      debug: 4.3.7(supports-color@5.5.0)
 
   form-data@4.0.0:
     dependencies:
@@ -1703,7 +1707,7 @@ snapshots:
 
   minimatch@3.1.2:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 1.1.21
 
   mongodb-connection-string-url@3.0.1:
     dependencies:
@@ -1716,13 +1720,13 @@ snapshots:
       bson: 6.8.0
       mongodb-connection-string-url: 3.0.1
 
-  mongoose@8.6.1:
+  mongoose@8.6.1(supports-color@5.5.0):
     dependencies:
       bson: 6.8.0
       kareem: 2.6.3
       mongodb: 6.8.0
       mpath: 0.9.0
-      mquery: 5.0.0
+      mquery: 5.0.0(supports-color@5.5.0)
       ms: 2.1.3
       sift: 17.1.3
     transitivePeerDependencies:
@@ -1737,7 +1741,7 @@ snapshots:
 
   mpath@0.9.0: {}
 
-  mquery@5.0.0:
+  mquery@5.0.0(supports-color@5.5.0):
     dependencies:
       debug: 4.3.7(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -1868,9 +1872,9 @@ snapshots:
 
   semver@7.6.3: {}
 
-  send@0.18.0:
+  send@0.18.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -1886,12 +1890,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.15.0:
+  serve-static@1.15.0(supports-color@5.5.0):
     dependencies:
       encodeurl: 1.0.2
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.18.0
+      send: 0.18.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
